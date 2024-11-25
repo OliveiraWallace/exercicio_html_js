@@ -6,11 +6,11 @@ const mensagem = document.getElementById('mensagem');
 formulario.addEventListener('submit', function(e) {
     e.preventDefault(); // Impede o envio padrão do formulario
 
-    const campaA = parseFloat(document.getElementById('campoA').value);
+    const campoA = parseFloat(document.getElementById('campoA').value);
     const campoB = parseFloat(document.getElementById('campoB').value);
 
     // Uso do "textContent" por ser mais seguro que "innerHTML", pois trabalha apenas com textos e não leva em conta as tags
-    if (campaA > campoB) {
+    if (campoB > campoA) {
         mensagem.textContent = 'Formulário válido: Campo B é maior que campo A.';
         mensagem.style.color = 'green';
     } else {
